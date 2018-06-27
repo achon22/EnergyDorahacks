@@ -15,8 +15,9 @@ class Balance extends React.Component {
     // Token class name, token class amount
     const getBalance = async() => {
       const address = this.state.web3.eth.accounts[0];
-      this.instance.classesOwned.call(address).then(classes => {
+      const classes = this.instance.classesOwned.call(address).then(classes => {
         console.log(classes);
+        return classes;
       });
 
       // const result = instance.classesOwned(address).then(classes => {
@@ -32,26 +33,26 @@ class Balance extends React.Component {
       //   // }
       //   return classBalances
       // })
+      return classes;
     }
     const data = [{
-      name: 'PNG Coin',
-      friend: {
-        age: 23,
-      }
-    }, {
-      name: 'PNG Coin',
-      friend: {
-        age: 23,
-      }
-    }]
-
-    const columns = [{
-      Header: 'Energy Coin',
-      accessor: 'name' // String-based value accessors!
-    }, {
-      Header: props => <span>Balance</span>, // Custom header components!
-      accessor: 'friend.age'
+        name: 'PNG Coin',
+        friend: {
+          age: 23,
+        }
+      }, {
+        name: 'PNG Coin',
+        friend: {
+          age: 23,
+        }
       }]
+    const columns = [{
+        Header: 'Energy Coin',
+        accessor: 'name' // String-based value accessors!
+      }, {
+        Header: props => <span>Balance</span>, // Custom header components!
+        accessor: 'friend.age'
+        }]
     const balance = getBalance();
     console.log(balance);
     return(
