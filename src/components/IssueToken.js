@@ -1,6 +1,9 @@
 import React from 'react';
+import { Input } from 'antd';
 // import ReactTable from "react-table";
 import 'react-table/react-table.css'
+import 'antd/dist/antd.css';
+
 
 
 class IssueToken extends React.Component {

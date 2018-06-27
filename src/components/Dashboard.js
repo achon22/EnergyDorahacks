@@ -1,4 +1,13 @@
 import React, { Component } from 'react'
+import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Card, Col, Row } from 'antd';
+const { Meta } = Card;
+const { SubMenu } = Menu;
+const { Header, Content, Footer, Sider } = Layout;
+import 'antd/dist/antd.css';
+
+import '../css/Home.css'
+
 import MCFTContract from '../../build/contracts/MCFTEnergyTokenContract.json'
 import getWeb3 from '../utils/getWeb3'
 import MCFTBytecode from '../utils/MCFT'  // eslint-disable-line
@@ -11,13 +20,6 @@ import IssueToken from './IssueToken'
 // import Balance from './components/Balance'
 import ReactTable from "react-table";
 import 'react-table/react-table.css'
-import Header from './Header'
-
-// ^^ Import our fonts and CSS.
-import '../css/roboto.css'
-import '../css/rubik.css'
-import '../css/milligram.min.css'
-import '../App.css'
 
 class Dashboard extends Component {
   constructor(props) {
@@ -144,36 +146,77 @@ class Dashboard extends Component {
 
 render() {
     return (
-      <div className="App">
-        <Header/>
-        {/* <div className="top-bar">
-          <a href="#" className="title-link">🍕 Ethereum and React</a>
-          <div className="notice-box">Looks like Truffle React Box is up and running 👍👍</div>
-        </div> */}
-
-        <main className="container">
-          <h1>Hello World</h1>
-          <h2>Our First Smart Contract</h2>
-          <div className="contract-status">
-            <p>If your contracts compiled and migrated successfully, we'll show your contract address and the hello message below.</p>
-            <div>Your contract address is: <span className="contract-address">{this.state.contractAddress}</span></div>
-          </div>
-          <p className="message">The hello message from your contract is: <strong className="hello-world">{this.state.hello}</strong></p>
-          <ContractInput state={this.state} updateHello={this.updateHello} initModal={this.initModal} />
-          {/* <Balance state={this.state} initModal={this.initModal}/> */}
-          <h3 style={{width:'70vh', margin:'auto'}}>User Balance</h3>
-          <div style={{width:'70vh', margin:'auto'}}>
-            <ReactTable
-              data={this.state.tableData}
-              columns={this.state.columns}
-              showPagination={false}
-              defaultPageSize={this.state.tableData.length}
-            />
-          </div>
-          <IssueToken  state={this.state} initModal={this.initModal}/>
-        </main>
-        <Modal modal={this.state.modal} />
-      </div>
+        <Layout>
+          <Header className="header">
+            <div className="logo" />⚡️ NRG Energy Exchange ⚡️
+            <Menu
+              theme="dark"
+              mode="horizontal"
+              defaultSelectedKeys={['1']}
+              style={{ lineHeight: '64px' }}
+            >
+              <Menu.Item key="0"><a href="/"><Icon type="pie-chart" />Analytics</a></Menu.Item>
+              <Menu.Item key="1"><a href="/dashboard"><Icon type="folder" /> Dashboard</a></Menu.Item>
+              <Menu.Item key="2"><a href="/marketplace"><Icon type="appstore" /> Marketplace</a></Menu.Item>
+              <Menu.Item key="3"><Icon type="code-o" /> Whitepaper</Menu.Item>
+            </Menu>
+          </Header>
+          <Content style={{ padding: '0 50px' }}>
+            <Breadcrumb style={{ margin: '16px 0' }}>
+              <Breadcrumb.Item>Home</Breadcrumb.Item>
+              <Breadcrumb.Item>List</Breadcrumb.Item>
+              <Breadcrumb.Item>App</Breadcrumb.Item>
+            </Breadcrumb>
+            <Layout style={{ padding: '24px 0', background: '#fff' }}>
+              <Sider width={200} style={{ background: '#fff' }}>
+                <Menu
+                  mode="inline"
+                  defaultSelectedKeys={['1']}
+                  defaultOpenKeys={['sub1']}
+                  style={{ height: '100%' }}
+                >
+                  <SubMenu key="sub1" title={<span><Icon type="user" />Transactions</span>}>
+                    <Menu.Item key="1">Bulk Buy</Menu.Item>
+                    <Menu.Item key="2">Bulk Sell</Menu.Item>
+                    <Menu.Item key="3">Buy</Menu.Item>
+                    <Menu.Item key="4">Sell</Menu.Item>
+                  </SubMenu>
+                  <SubMenu key="sub2" title={<span><Icon type="laptop" />Network Trading</span>}>
+                    <Menu.Item key="5">option5</Menu.Item>
+                    <Menu.Item key="6">option6</Menu.Item>
+                    <Menu.Item key="7">option7</Menu.Item>
+                    <Menu.Item key="8">option8</Menu.Item>
+                  </SubMenu>
+                  <SubMenu key="sub3" title={<span><Icon type="notification" />Announcements</span>}>
+                    <Menu.Item key="9">option9</Menu.Item>
+                    <Menu.Item key="10">option10</Menu.Item>
+                    <Menu.Item key="11">option11</Menu.Item>
+                    <Menu.Item key="12">option12</Menu.Item>
+                  </SubMenu>
+                </Menu>
+              </Sider>
+              <Content style={{ padding: '0 24px', minHeight: 280 }}>
+                <h2>Dashboard</h2>
+                <div>Your contract address is: <span className="contract-address">{this.state.contractAddress}</span></div>
+                <IssueToken  state={this.state} initModal={this.initModal}/>
+                <Row gutter={16}>
+                  <Col span={8}>
+                    <Card title="Solar Coins" extra={<a href="#">45 SLC</a>} actions={[<Icon type="setting" />, <Icon type="edit" />, <Icon type="ellipsis" />]}>496 tokens issued by SolarCity</Card>
+                  </Col>
+                  <Col span={8}>
+                    <Card title="Wind Coins" extra={<a href="#">4588 ZZL</a>} actions={[<Icon type="setting" />, <Icon type="edit" />, <Icon type="ellipsis" />]}>5066 tokens issued by WindZZLo</Card>
+                  </Col>
+                  <Col span={8}>
+                    <Card title="Solar Coins" extra={<a href="#">45 SLC</a>} actions={[<Icon type="setting" />, <Icon type="edit" />, <Icon type="ellipsis" />]}>496 tokens issued by SolarCity</Card>
+                  </Col>
+                </Row>
+              </Content>
+            </Layout>
+          </Content>
+          <Footer style={{ textAlign: 'center' }}>
+            2018 &copy; Created with <span><Icon type="heart" /></span> by Albert Chon, Aditya Khandelwal at Stanford, CA
+          </Footer>
+        </Layout>
     );
   }
 }

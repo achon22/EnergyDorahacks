@@ -22,7 +22,7 @@ class Home extends Component {
               <Menu.Item key="0"><a href="/"><Icon type="pie-chart" /> Analytics</a></Menu.Item>
               <Menu.Item key="1"><a href="/dashboard"><Icon type="folder" /> Dashboard</a></Menu.Item>
               <Menu.Item key="2"><a href="/marketplace"><Icon type="appstore" /> Marketplace</a></Menu.Item>
-              <Menu.Item key="3"><Icon type="code-o" /> Whitepaper</Menu.Item>
+              <Menu.Item key="3"><a href="https://www.dropbox.com/s/cnlqixy85hlid71/DoraHacks-2018_MCFT.pdf?dl=0"><Icon type="code-o" /> Whitepaper</a></Menu.Item>
             </Menu>
           </Header>
           <Content style={{ padding: '0 50px' }}>
