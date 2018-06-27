@@ -17,6 +17,7 @@ class Header extends Component {
               <NavbarDivider />
               <Link className="pt-button pt-minimal pt-icon-grid-view" to="/marketplace"> Marketplace </Link>
               <Link className="pt-button pt-minimal pt-icon-alignment-bottom" to="/dashboard"> Dashboard </Link>
+              <Link className="pt-button pt-minimal pt-icon-bookmark" to="/whitepaper"> Whitepaper </Link>
           </NavbarGroup>
           <NavbarGroup align={Alignment.RIGHT}>
               <input className="pt-input" placeholder="Search NRG..." type="text" />

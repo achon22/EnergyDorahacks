@@ -4,20 +4,34 @@
   background-color: #000!important;
 }
 .header {
-  height: 5vh;
-  width: 100vw;
   color: #fff;
   font-family: 'Inconsolata';
-  font-size: 2em;
-  line-height: 1.5em;
+  font-size: 1.5em;
+  line-height: 2.8em;
   text-align: center;
-  padding-bottom: 2px;
-  border-bottom: 1px solid #fff;
 }
 
 .header-section {
-  height: 60vh;
+  height: 50vh;
   width: 100vw;
   background-color: #eee!important;
-  vertical-align: 
+  vertical-align:middle;
+  text-align: center;
+}
+
+.header-section2 {
+  height: 50vh;
+  width: 30vw;
+  background-color: #2ecc71!important;
+  vertical-align:middle;
+  text-align: center;
+}
+
+.title {
+  padding-top: 27vh;
+  font-family: 'Inconsolata'
+}
+
+a {
+  text-decoration: none!important;
 }

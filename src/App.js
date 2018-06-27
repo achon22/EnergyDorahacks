@@ -12,6 +12,8 @@ import { BrowserRouter, Route } from 'react-router-dom'
 // Import our main views
 import Home from './components/Home.js'
 import Dashboard from './components/Dashboard.js'
+import Test from './components/Test.js'
+
 // import Marketplace from './components/Marketplace'
 // import Dashboard from './components/Dashboard'
 
@@ -24,6 +26,7 @@ class App extends Component {
           <Route path="/" component={ Home } exact/>
           {/* <Route path="/marketplace" component={ Marketplace } /> */}
           <Route path="/dashboard" component={ Dashboard } />
+          <Route path="/test" component={Test}/>
         </div>
       </BrowserRouter>
     )

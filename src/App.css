@@ -1,7 +1,7 @@
 /* Page Styles. */
 
 /* Typography. */
-body {
+/* body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   color: #333333;
@@ -32,10 +32,10 @@ strong {
   width: 100%;
   max-width: 1000px;
   padding: 25px 20px;
-}
+} */
 
 /* Topbar. */
-.top-bar {
+/* .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,10 +55,10 @@ strong {
 .title-link:active,
 .title-link:focus {
   color: #D26451;
-}
+} */
 
 /* Info box with contract address. */
-.notice-box {
+/* .notice-box {
   padding: 5px 15px;
   font-size: 14px;
   border-radius: 5px;
@@ -90,9 +90,10 @@ strong {
   display: block;
   font-size: 48px;
 }
+*/
 
 /* Form styles. */
-.hello-form {
+/* .hello-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,10 +127,10 @@ strong {
 .button-submit:hover {
   cursor: pointer;
   background: #b60503;
-}
+}  */
 
 /* Modal */
-.modal {
+/* .modal {
   position: absolute;
   background: rgba(0,0,0,0.3);
   width: 100%;
@@ -174,10 +175,10 @@ strong {
 .modal--isActive .modal-box {
   opacity: 1;
   transform: translateY(-50%);
-}
+} */
 
 /* Spinner animation taken and modified from: http://tobiasahlin.com/spinkit/ */
-.spinner {
+/* .spinner {
   position: relative;
   margin: 0 auto 30px;
   width: 60px;
@@ -207,4 +208,4 @@ strong {
   } 50% {
     transform: scale(1.0);
   }
-}
+} */

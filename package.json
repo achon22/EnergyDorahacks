@@ -51,6 +51,9 @@
   "dependencies": {
     "@blueprintjs/core": "^2.3.1",
     "@blueprintjs/icons": "^2.2.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.0",
+    "@fortawesome/react-fontawesome": "0.1.0-11",
+    "antd": "^3.6.4",
     "dotenv": "^2.0.0",
     "react": "^16.4.1",
     "react-animate-on-change": "^1.0.1",
