@@ -14,10 +14,7 @@ import Home from './components/Home.js'
 import Dashboard from './components/Dashboard.js'
 // import Marketplace from './components/Marketplace'
 // import Dashboard from './components/Dashboard'
-//
-// import 'normalize.css/normalize.css'
-// import '@blueprintjs/core/lib/css/blueprint.css'
-// import '@blueprintjs/icons/lib/css/blueprint-icons.css'
+
 
 class App extends Component {
   render() {

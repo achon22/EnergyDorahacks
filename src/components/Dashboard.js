@@ -11,6 +11,7 @@ import IssueToken from './IssueToken'
 // import Balance from './components/Balance'
 import ReactTable from "react-table";
 import 'react-table/react-table.css'
+import Header from './Header'
 
 // ^^ Import our fonts and CSS.
 import '../css/roboto.css'
@@ -144,10 +145,11 @@ class Dashboard extends Component {
 render() {
     return (
       <div className="App">
-        <div className="top-bar">
+        <Header/>
+        {/* <div className="top-bar">
           <a href="#" className="title-link">🍕 Ethereum and React</a>
           <div className="notice-box">Looks like Truffle React Box is up and running 👍👍</div>
-        </div>
+        </div> */}
 
         <main className="container">
           <h1>Hello World</h1>
